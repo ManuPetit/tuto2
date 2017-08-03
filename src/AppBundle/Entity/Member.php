@@ -43,6 +43,7 @@ class Member implements UserInterface, \Serializable
      */
     private $password;
 
+    private $plainPassword;
 
     /**
      * Get id
@@ -125,6 +126,23 @@ class Member implements UserInterface, \Serializable
     {
         return $this->password;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getPlainPassword()
+    {
+        return $this->plainPassword;
+    }
+
+    /**
+     * @param mixed $plainPassword
+     */
+    public function setPlainPassword($plainPassword)
+    {
+        $this->plainPassword = $plainPassword;
+    }
+
 
     public function serialize()
     {
